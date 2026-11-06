@@ -1,0 +1,21 @@
+# Local secrets — never commit
+.env
+.env.*
+!**/.env.local.example
+!app/.env.local.example
+
+# Build output and dependencies
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vercel/
+**/.vercel/
+
+# Working notes, not part of the deliverable
+commandprompt.txt
+previous.txt
+
+# Submission drafts kept local only
+POSTER.txt
+VIDEO_SCRIPT.txt

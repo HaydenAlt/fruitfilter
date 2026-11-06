@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>FruitFilter — know if it's ready</title>
+    <meta
+      name="description"
+      content="Point your camera at a fruit. FruitFilter estimates ripeness, gives one piece of advice, and flags allergen cross-reactions."
+    />
+    <meta name="theme-color" content="#1F4D2E" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32-v3.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16-v3.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-v3.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FruitFilter" />
+    <meta
+      property="og:description"
+      content="Point your camera at a fruit. Know if it's ready, what to do with it, and whether it could trigger an allergic reaction."
+    />
+    <meta property="og:image" content="https://fruitfilter.vercel.app/icons/icon-512-v3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="FruitFilter" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script>
+      try {
+        var mode = JSON.parse(localStorage.getItem('ff.theme.v1') || '"system"')
+        var dark =
+          mode === 'dark' ||
+          (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+        var themeMeta = document.querySelector('meta[name="theme-color"]')
+        if (themeMeta) themeMeta.setAttribute('content', dark ? '#0E1A12' : '#1F4D2E')
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
