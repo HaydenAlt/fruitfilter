@@ -186,11 +186,7 @@ export default function App() {
         <header className="top">
           <div className="brand">
             <span className="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 64 64" width="34" height="34">
-                <rect width="64" height="64" rx="16" fill="#1F4D2E" />
-                <circle cx="32" cy="35" r="15" fill="#E8A33D" />
-                <ellipse cx="39" cy="24" rx="11" ry="5" transform="rotate(-32 39 24)" fill="#D9E7CF" />
-              </svg>
+              <img src="/icons/icon-192-v3.png" alt="" width={34} height={34} />
             </span>
             <span className="brand-name">FruitFilter</span>
           </div>

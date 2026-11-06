@@ -197,8 +197,16 @@ body.has-install .app {
 .brand-mark {
   display: inline-flex;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(31, 77, 46, 0.24);
+  box-shadow: 0 4px 12px rgba(7, 28, 85, 0.22);
   flex: none;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
 }
 
 .brand-name {
